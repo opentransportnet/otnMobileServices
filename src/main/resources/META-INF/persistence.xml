@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <!--  <persistence-unit name="OTNplatformPU" transaction-type="JTA">
+      <jta-data-source>otn_web_app</jta-data-source>
+      <exclude-unlisted-classes>false</exclude-unlisted-classes>
+      <properties/>
+    </persistence-unit>-->
+    <persistence-unit name="OTNplatformPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>otn.mobile.persistency.Apps</class>
+        <class>otn.mobile.persistency.Issue</class>
+        <class>otn.mobile.persistency.IssueType</class>
+        <class>otn.mobile.persistency.Poi</class>
+        <class>otn.mobile.persistency.PoiRating</class>
+        <class>otn.mobile.persistency.PoiRatingType</class>
+        <class>otn.mobile.persistency.Source</class>
+        <class>otn.mobile.persistency.Track</class>
+        <class>otn.mobile.persistency.TrackRating</class>
+        <class>otn.mobile.persistency.TrackRatingType</class>
+        <class>otn.mobile.persistency.TrackfileCsv</class>
+        <class>otn.mobile.persistency.TransportType</class>
+        <class>otn.mobile.persistency.User</class>
+        <class>otn.mobile.persistency.Weather</class>
+        <class>otn.mobile.persistency.WebAnalytics</class>
+        <class/>
+        <class>otn.mobile.persistency.TrackRatingType</class>
+        <class>otn.mobile.persistency.TrackSpatial</class>
+        <class>otn.mobile.persistency.PublicPoiCategory</class>
+        <class>otn.mobile.persistency.PublicPoiRating</class>
+        <class>otn.mobile.persistency.PublicPoi</class>
+        <class>otn.mobile.persistency.PublicPoiVerified</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/<url>"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <property name="javax.persistence.jdbc.password" value="<password>"/>
+            <property name="javax.persistence.jdbc.user" value="<user>"/>
+        </properties>
+    </persistence-unit>
+</persistence>
